@@ -1,0 +1,28 @@
+.nav {
+  color: #fff;
+  background-color: #3aa5c0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  z-index: 1;
+}
+  
+.TitleAndSearchBar {
+  margin-left: 4%;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutNavButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 20%;
+}
+  

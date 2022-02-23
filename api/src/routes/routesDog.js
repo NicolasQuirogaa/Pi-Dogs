@@ -2,7 +2,7 @@ const express = require('express');
 const dogs = express.Router();
 const { Temperament, Dog } = require('../db');
 
-const { getAllDogs /*, getApiInfoDog, getDBInfoDog */ } = require('../controllers/dogControllers');
+const { getAllDogs , getApiInfoDog, getDBInfoDog  } = require('../controllers/dogControllers');
 const { default: axios } = require('axios');
 
 dogs.use(express.json());
@@ -10,6 +10,7 @@ dogs.use(express.json());
 dogs.get('/dogs', async (req, res) => {
     /* http://localhost:3001/dogs && http://localhost:3001/dogs/?name=Affenpinscher */
         const name = req.query.name;
+        console.log(name)
         try {
             let dogsTotal = await getAllDogs();
             if (name) { /* Si entra un query */
@@ -27,6 +28,7 @@ dogs.get('/dogs', async (req, res) => {
         }
 
     });
+
 
 dogs.post('/dogs', async (req, res) => {
     var { // Toma estas propiedades para construir el nuevo perro 
